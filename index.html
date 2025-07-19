@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedido de Desculpas - Anthony</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Playfair Display', serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #f5e9df;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 25px 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    .line {
+      margin: 12px 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .quote {
+      margin-left: 15px;
+      font-size: 1rem;
+      font-style: italic;
+      color: #e0c097;
+    }
+
+    .author {
+      text-align: right;
+      margin-top: 20px;
+      color: #d7af63;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .yes {
+      background-color: #ffd5ec;
+      color: #5b0037;
+    }
+
+    .no {
+      background-color: #f8d7da;
+      color: #7a1f2a;
+      position: relative;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #ffcad4;
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        max-width: 90vw;
+        padding: 20px 25px;
+      }
+      .line {
+        font-size: 1rem;
+      }
+      .author {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .line {
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+      .author {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="line">Manuella,</p>
+    <p class="line">Eu fui guiado pela mágoa e pela incerteza. Estava perdido em mim mesmo.</p>
+    <p class="line">Mas agora, arrependido, eu vejo o quanto você foi minha paz. Meu lar.</p>
+
+    <p class="line quote">"All the pretty stars shine for you, my love..."</p>
+    <p class="line quote">(“Pretty When You Cry”)</p>
+
+    <p class="line">Desde que nos reencontramos, meus dias ganharam cor. Você me fez sentir vivo de novo.</p>
+
+    <p class="line quote">"Now my life is sweet like cinnamon, like a fucking dream I'm living in..."</p>
+    <p class="line quote">(“Radio”)</p>
+
+    <p class="line">Eu nunca deixei de ser leal a você.</p>
+    <p class="line">Se eu lembrasse do que fiz antes, teria te contado. Teria implorado seu perdão... porque:</p>
+
+    <p class="line quote">"I lost myself when I lost you."</p>
+    <p class="line quote">(“Terrence Loves You”)</p>
+
+    <p class="line">Eu não te peço para esquecer. Só te peço uma chance de mostrar que eu te amo de verdade. Que faço tudo por você.</p>
+
+    <p class="line quote">"I will love you 'til the end of time... I would wait a million years..."</p>
+    <p class="line quote">(“Blue Jeans”)</p>
+
+    <p class="line quote">"It's you, it's you, it's all for you — everything I do..."</p>
+    <p class="line quote">(“Video Games”)</p>
+
+    <p class="line quote">"Heaven is a place on Earth with you."</p>
+    <p class="line quote">(“Video Games”)</p>
+
+    <p class="line">Me dá a chance de te provar com ações o que as palavras não bastam.  
+    Não quero ficar te perturbando, mas também não sei ficar sem você.</p>
+
+    <p class="line">Com amor,</p>
+    <p class="line author">Anthony</p>
+
+    <div class="buttons">
+      <p class="line">Vamos conversar um pouquinho?</p>
+      <button class="yes" onclick="showMessage()">Sim</button>
+      <button class="no" id="noBtn" onmouseover="moveButton()">Não</button>
+      <div class="message" id="message">Manda mensagem então 🥺</div>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    function moveButton() {
+      const button = document.getElementById("noBtn");
+      const x = Math.floor(Math.random() * 200) - 100;
+      const y = Math.floor(Math.random() * 200) - 100;
+      button.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script>
+</body>
+</html>
